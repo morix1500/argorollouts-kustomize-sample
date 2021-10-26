@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: sample
+spec:
+  template:
+    spec:
+      containers:
+      - name: rollouts-demo
+        env:
+        - name: CCC
+          value: CCC

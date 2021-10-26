@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: sample
+spec:
+  template:
+    metadata:
+      labels:
+        app: sample
+    spec:
+      containers:
+      - name: rollouts-demo
+        image: argoproj/rollouts-demo:blue
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: AAA
+          value: AAA
+        - name: BBB
+          value: BBB
